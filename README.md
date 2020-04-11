@@ -1,6 +1,8 @@
 # 4cyberland
 
-A straight looking frontend for cyberland.club
+A straight frontend for cyberland.club
+
+![Screenshot](screenshot.png)
 
 ## Build Setup
 
