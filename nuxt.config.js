@@ -1,6 +1,14 @@
+require('dotenv').config()
 
 module.exports = {
   mode: 'universal',
+  /*
+  ** Environment variables. Mostly providing sensible defaults. You may override
+  ** them in your .env file.
+  */
+  env: {
+    CYBERLAND_API_BASE_URL: process.env.CYBERLAND_API_BASE_URL || 'https://cyberland.club/'
+  },
   /*
   ** Headers of the page
   */
@@ -28,12 +36,20 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/cyberland',
+    '~/plugins/board-url',
+    '~/plugins/board-name',
+    {
+      src: "~/plugins/vue-waypoint",
+      mode: 'client'
+    }
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     '@nuxt/typescript-build',
+    '@nuxtjs/dotenv',
   ],
   /*
   ** Nuxt.js modules

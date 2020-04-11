@@ -1,4 +1,5 @@
 const express = require('express')
+const proxy = require('express-http-proxy')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
@@ -19,6 +20,12 @@ async function start () {
     const builder = new Builder(nuxt)
     await builder.build()
   }
+
+  // Proxy middleware because https://cyberland.club/ has CORS disabled.
+  app.use('/proxy', proxy(config.env.CYBERLAND_API_BASE_URL, {
+    https: true,
+    limit: '1mb'
+  }))
 
   // Give nuxt middleware to express
   app.use(nuxt.render)

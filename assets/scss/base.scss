@@ -1,0 +1,14 @@
+@import "~/assets/scss/variables.scss";
+
+html {
+  color: $text-color;
+  background: linear-gradient(darken($background-color, 5%), $background-color 120px) no-repeat;
+  background-color: $background-color;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,7 +1,7 @@
 {
-  "name": "cyberland-explorer",
+  "name": "4cyberland",
   "version": "1.0.0",
-  "description": "My finest Nuxt.js project",
+  "description": "A straight frontend for cyberland.club",
   "author": "dsts",
   "private": true,
   "scripts": {
@@ -11,13 +11,20 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
+    "@netsells/vue-set-timeout": "^0.1.4",
+    "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
-    "@nuxtjs/axios": "^5.3.6"
+    "express-http-proxy": "^1.6.0",
+    "nuxt": "^2.0.0",
+    "qs": "^6.9.3",
+    "vue-waypoint": "^3.4.1"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^0.6.0",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.18.9",
-    "@nuxt/typescript-build": "^0.6.0"
+    "sass-loader": "^8.0.2"
   }
 }

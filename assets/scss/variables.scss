@@ -1,0 +1,37 @@
+// Provides commonly used variables for every component.
+
+$main-color: #d6daf0;
+
+$second-color: #dd0000;
+
+// The color that is used for the background of the page. Any content placed on
+// the page must be careful not to blend in with this color unless on purpose.
+$background-color: #eef2ff;
+
+// A color that must stand out from the primary color.
+$accent-color: #98e;
+
+// A color that calls for attention.
+$attention-color: #af0a0f;
+
+// For borders.
+$border-color: #b7c5d9;
+
+// Text links ought to use this color.
+$link-color: #34345c;
+
+// Every paragraph must use this color.
+$text-color: #222;
+
+// The font that is used by default. When in doubt choose this.
+$font-family-base: Arial, 'Helvetica Neue', sans-serif;
+
+// Main content must use this font size.
+$font-size-base: 12px;
+
+// Base value for separating elements. When in doubt, use this value. You may
+// perform multiplication and division on it.
+$comfort-space-base: 4px;
+
+// For elements that are meant to be close to each other.
+$comfort-space-close: 1px;

@@ -1,8 +1,11 @@
-# cyberland-explorer
+# 4cyberland
 
-> My finest Nuxt.js project
+A straight looking frontend for cyberland.club
 
 ## Build Setup
+
+Assuming you have Node.js installed, run the following commands to get this up
+and running quickly:
 
 ```bash
 # install dependencies
@@ -10,13 +13,26 @@ $ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+For production:
+
+```bash
+# install dependencies
+$ npm install
+
+# build for production.
+$ npm run build
+
+# launch server
+$ npm run start
+```
+
+## Custom settings
+
+Create a file called `.env` and change any of the settings you want:
+
+```bash
+# Base url for the cyberland API.
+CYBERLAND_API_BASE_URL=https://cyberland.club/
+```
