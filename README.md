@@ -10,6 +10,10 @@ A straight frontend for cyberland.club
 - Auto load feature in threads. Loads new posts automatically.
 - Safe from XSS
 
+In development:
+- Meme arrows
+- VT100 escape sequences for colors and text formatting (terminal art)
+
 There's only one restriction right now. You cannot see replies to posts. You can
 only see replies to threads.
 
