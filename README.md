@@ -4,6 +4,14 @@ A straight frontend for cyberland.club
 
 ![Screenshot](screenshot.png)
 
+- Boards organized in threads.
+- Progressive board loading. Most recent replies to threads are loaded as soon
+  as the thread appears on screen. This probably makes this the fastest client.
+- Auto load feature in threads. Loads new posts automatically.
+
+There's only one restriction right now. You cannot see replies to posts. You can
+only see replies to threads.
+
 ## Build Setup
 
 Assuming you have Node.js installed, run the following commands to get this up
