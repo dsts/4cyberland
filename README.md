@@ -8,6 +8,7 @@ A straight frontend for cyberland.club
 - Progressive board loading. Most recent replies to threads are loaded as soon
   as the thread appears on screen. This probably makes this the fastest client.
 - Auto load feature in threads. Loads new posts automatically.
+- Safe from XSS
 
 There's only one restriction right now. You cannot see replies to posts. You can
 only see replies to threads.
