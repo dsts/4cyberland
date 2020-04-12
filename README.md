@@ -11,11 +11,8 @@ A straight frontend for cyberland.club
 - Safe from XSS
 - >Meme arrows
 
-In development:
-- VT100 escape sequences for colors and text formatting (terminal art)
-
-There's only one restriction right now. You cannot see replies to posts. You can
-only see replies to threads.
+There's only one restriction. You cannot see replies to posts. You can only see
+replies to threads.
 
 ## Build Setup
 
