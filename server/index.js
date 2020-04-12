@@ -23,7 +23,7 @@ async function start () {
 
   // Proxy middleware because https://cyberland.club/ has CORS disabled.
   app.use('/proxy', proxy(config.env.CYBERLAND_API_BASE_URL, {
-    https: true,
+    https: config.env.CYBERLAND_API_BASE_URL.startsWith('https://'),
     limit: '1mb'
   }))
 
