@@ -14,7 +14,7 @@
       <div v-for="(thread, index) in threads" class="board__thread">
         <rule v-if="index !== 0" />
 
-        <div v-if="!loadingThreadReplies && !posting" v-waypoint="{ active: true, callback: threadWaypoint.bind(null, thread) }"></div>
+        <div v-waypoint="{ active: !loadingThreadReplies && !posting, callback: threadWaypoint.bind(null, thread) }"></div>
 
         <board-thread :boardId="boardId" :thread="thread" />
 
@@ -37,7 +37,7 @@
       <loading-icon /> Retrieving more threads...
     </template>
 
-    <div v-if="!loadingBoard && !posting" v-waypoint="{ active: !loadingThreads, callback: bottomWaypoint }"></div>
+    <div v-waypoint="{ active: !loadingBoard && !posting && !loadingThreads, callback: bottomWaypoint }"></div>
   </div>
 </template>
 
