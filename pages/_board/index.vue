@@ -116,7 +116,7 @@ export default Vue.extend<Data, any, any, any>({
       if (waypoint.going === 'in') {
         try {
           this.loadingThreads = true;
-          await this.$store.dispatch('boards/loadMoreThreads', { boardId: this.boardId })
+          await this.$store.dispatch('boards/loadOldThreads', { boardId: this.boardId })
         } finally {
           this.loadingThreads = false;
         }

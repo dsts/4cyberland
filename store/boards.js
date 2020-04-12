@@ -199,7 +199,29 @@ export const actions = {
     })
   },
 
-  async loadMoreThreads(context, data) {
+  async loadNewThreads(context, data) {
+    if (!context.state.byId[data.boardId]) {
+      context.commit('initialize', data)
+    }
+
+    let board = context.state.byId[data.boardId]
+
+    // Reading up to THREAD_LOAD. Hoping not more than THREAD_LOAD threads have
+    // been created since last time.
+    let response = await this.$cyberlandGet(`/${data.boardId}/`, {
+      query: {
+        thread: "0",
+        num: THREAD_LOAD,
+      }
+    })
+
+    context.commit('pushThreads', {
+      boardId: data.boardId,
+      posts: response
+    })
+  },
+
+  async loadOldThreads(context, data) {
     if (!context.state.byId[data.boardId]) {
       context.commit('initialize', data)
     }
@@ -284,7 +306,7 @@ export const actions = {
       }
     })
 
-    await context.dispatch('loadBoard', {
+    await context.dispatch('loadNewThreads', {
       boardId: data.boardId
     })
   },
