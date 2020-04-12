@@ -7,17 +7,19 @@
       <text-link v-for="reply in replies" :key="reply.id" class="board-post-box__info__reply" standout @click="onClickReply(reply)">&gt;&gt;{{ reply.id }}</text-link>
     </div>
 
-    <div class="board-post-box__content">{{ content }}</div>
+    <rich-content class="board-post-box__content" :content="content" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import TextLink from '~/components/TextLink.vue'
+import RichContent from '~/components/RichContent.vue'
 
 export default Vue.extend({
   components: {
-    TextLink
+    TextLink,
+    RichContent
   },
 
   props: {
@@ -68,8 +70,6 @@ export default Vue.extend({
 
 .board-post-box__content {
   padding: ($comfort-space-base * 3) ($comfort-space-base * 10);
-  white-space: pre-wrap;
-  word-break: break-word;
 }
 
 .board-post-box__info__reply {
