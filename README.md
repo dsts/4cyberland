@@ -9,9 +9,9 @@ A straight frontend for cyberland.club
   as the thread appears on screen. This probably makes this the fastest client.
 - Auto load feature in threads. Loads new posts automatically.
 - Safe from XSS
+- >Meme arrows
 
 In development:
-- Meme arrows
 - VT100 escape sequences for colors and text formatting (terminal art)
 
 There's only one restriction right now. You cannot see replies to posts. You can
