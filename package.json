@@ -14,7 +14,7 @@
     "@netsells/vue-set-timeout": "^0.1.4",
     "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-http-proxy": "^1.6.0",
     "nuxt": "^2.0.0",
     "qs": "^6.9.3",
